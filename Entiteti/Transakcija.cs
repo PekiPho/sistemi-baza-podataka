@@ -16,9 +16,9 @@ namespace proejkt.Entiteti
 
         public virtual string Status { get; set; }
 
-        public virtual string RazlogNeuspeha { get; set; }
-
         public virtual decimal Iznos { get; set; }
+
+        public virtual string RazlogNeuspeha { get; set; }
 
         public virtual string Vreme { get; set; }
 

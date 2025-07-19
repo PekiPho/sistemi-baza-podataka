@@ -140,6 +140,11 @@
     <Compile Include="Mapiranja\KreditnaMapiranja.cs" />
     <Compile Include="Mapiranja\OrganizacijeMapiranja.cs" />
     <Compile Include="Mapiranja\PodrzaniServisiMapiranja.cs" />
+    <Compile Include="Mapiranja\PravnaLicaMapiranja.cs" />
+    <Compile Include="Mapiranja\RacunMapiranja.cs" />
+    <Compile Include="Mapiranja\TelefonFilijaleMapiranja.cs" />
+    <Compile Include="Mapiranja\TransakcijaMapiranja.cs" />
+    <Compile Include="Mapiranja\UplatniAutomatMapiranja.cs" />
     <Compile Include="Mapiranja\UredjajMapiranja.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
