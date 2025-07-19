@@ -9,19 +9,25 @@ using FluentNHibernate.Mapping;
 
 namespace proejkt.Mapiranje
 {
-    class BankaMapiranje : ClassMap<Banka>
+    class BankaMapiranja : ClassMap<Banka>
     {
-        public BankaMapiranje() 
+        public BankaMapiranja() 
         {
             Table("BANKA");
 
-            Id(el => el.Id, "ID_BANKE").GeneratedBy.TriggerIdentity();
+            Id(el => el.Id).Column("ID_BANKE").GeneratedBy.TriggerIdentity();
 
-            Map(el => el.Naziv, "NAZIV");
-            Map(el => el.Email, "EMAIL");
-            Map(el => el.AdresaCentrale, "ADRESA_CENTRALE");
-            Map(el => el.WebAdresa, "WEB_ADRESA");
-            Map(el => el.BrojTelefona, "BROJ_TELEFONA");
+            Map(el => el.Naziv).Column("NAZIV");
+            Map(el => el.Email).Column("EMAIL");
+            Map(el => el.AdresaCentrale).Column("ADRESA_CENTRALE");
+            Map(el => el.WebAdresa).Column("WEB_ADRESA");
+            Map(el => el.BrojTelefona).Column("BROJ_TELEFONA");
+
+            HasMany(el => el.Racuni).KeyColumn("BANKAID").Cascade.All().Inverse();
+
+            HasMany(el => el.Uredjaji).KeyColumn("BANKAID").Cascade.All().Inverse();
+
+            HasMany(el => el.Filijale).KeyColumn("BANKAID").Cascade.All().Inverse();
         }
     }
 }
