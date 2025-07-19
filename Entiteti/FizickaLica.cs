@@ -11,13 +11,13 @@ namespace proejkt.Entiteti
 
         public virtual string JMBG { get; set; }
 
-        public virtual string BrojLicneKarte { get; set; }
-
         public virtual string MestoIzdavanja { get; set; }
 
         public virtual string Adresa { get; set; }
 
         public virtual DateTime DatumRodjenja { get; set; }
+
+        public virtual string BrojLicneKarte { get; set; }
 
         public virtual string LicnoIme { get; set; }
 

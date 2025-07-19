@@ -10,9 +10,9 @@ namespace proejkt.Entiteti
     {
         public virtual string BrojKartice { get; protected set; }
 
-        public virtual DateTime DatumIzdavanja { get; set; }
-
         public virtual DateTime DatumIsteka { get; set; }
+
+        public virtual DateTime DatumIzdavanja { get; set; }
 
         public virtual Racun Racun { get; set; }
 

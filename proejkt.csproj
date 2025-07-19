@@ -132,6 +132,10 @@
     <Compile Include="Mapiranja\BankomatMapiranja.cs" />
     <Compile Include="Mapiranja\BrojTelefonaMapiranja.cs" />
     <Compile Include="Mapiranja\DebitnaMapiranja.cs" />
+    <Compile Include="Mapiranja\FilijalaMapiranja.cs" />
+    <Compile Include="Mapiranja\FizickaLicaMapiranja.cs" />
+    <Compile Include="Mapiranja\KarticaMapiranja.cs" />
+    <Compile Include="Mapiranja\KioskMapiranja.cs" />
     <Compile Include="Mapiranja\UredjajMapiranja.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
