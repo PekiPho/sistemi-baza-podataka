@@ -24,6 +24,9 @@ namespace proejkt.Mapiranja
             Map(el => el.LicnoIme).Column("LICNO_IME");
             Map(el => el.ImeRoditelja).Column("IME_RODITELJA");
             Map(el => el.Prezime).Column("PREZIME");
+
+
+            HasMany(el => el.BrojeviTelefona).KeyColumn("ID_KLIJENTA").Cascade.All().Inverse();
         }
     }
 }

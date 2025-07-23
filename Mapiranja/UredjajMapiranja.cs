@@ -28,6 +28,7 @@ namespace proejkt.Mapiranja
             References(el => el.Banka).Column("BANKAID").LazyLoad();
 
             HasMany(el => el.Transakcije).KeyColumn("UREDJAJID").Cascade.All().Inverse();
+            HasMany(el => el.Servisi).KeyColumn("ID_UREDJAJA").Cascade.All().Inverse();
         }
     }
 }

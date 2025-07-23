@@ -22,9 +22,12 @@ namespace proejkt.Entiteti
 
         public virtual IList<Uredjaj> Uredjaji { get; set; }
 
+        public virtual IList<TelefonFilijale> Telefoni { get; set; }
+
         public Filijala()
         {
             Uredjaji = new List<Uredjaj>();
+            Telefoni = new List<TelefonFilijale>();
         }
     }
 }

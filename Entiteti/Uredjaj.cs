@@ -31,10 +31,13 @@ namespace proejkt.Entiteti
 
         public virtual IList<Transakcija> Transakcije { get; set; }
 
+        public virtual IList<PodrzaniServisi> Servisi { get; set; }
+
 
         public Uredjaj()
         {
             Transakcije = new List<Transakcija>();
+            Servisi = new List<PodrzaniServisi>();
         }
 
     }
