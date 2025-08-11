@@ -105,6 +105,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataLayer.cs" />
+    <Compile Include="DTOManager.cs" />
+    <Compile Include="DTOs.cs" />
     <Compile Include="Entiteti\Banka.cs" />
     <Compile Include="Entiteti\Bankomat.cs" />
     <Compile Include="Entiteti\BrojTelefona.cs" />
@@ -128,6 +130,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\testForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\testForma.Designer.cs">
+      <DependentUpon>testForma.cs</DependentUpon>
     </Compile>
     <Compile Include="Mapiranja\BankaMapiranja.cs" />
     <Compile Include="Mapiranja\BankomatMapiranja.cs" />
