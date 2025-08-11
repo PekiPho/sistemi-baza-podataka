@@ -24,5 +24,13 @@ namespace proejkt.Entiteti
         public virtual string ImeRoditelja { get; set; }
 
         public virtual string Prezime { get; set; }
+
+        public virtual IList<BrojTelefona> BrojeviTelefona { get; set; }
+
+
+        public FizickaLica()
+        {
+            BrojeviTelefona = new List<BrojTelefona>();
+        }
     }
 }

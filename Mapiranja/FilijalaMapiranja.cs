@@ -22,6 +22,7 @@ namespace proejkt.Mapiranja
             References(el => el.Banka).Column("BANKAID").LazyLoad();
 
             HasMany(el => el.Uredjaji).KeyColumn("FILIJALAID").Cascade.All().Inverse();
+            HasMany(el => el.Telefoni).KeyColumn("REDNI_BROJ").Cascade.All().Inverse();
         }
     }
 }
