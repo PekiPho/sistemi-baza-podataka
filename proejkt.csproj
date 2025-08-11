@@ -104,6 +104,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataLayer.cs" />
     <Compile Include="Entiteti\Banka.cs" />
     <Compile Include="Entiteti\Bankomat.cs" />
     <Compile Include="Entiteti\BrojTelefona.cs" />
