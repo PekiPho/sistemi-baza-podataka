@@ -31,6 +31,14 @@ namespace proejkt
             this.WebAdresa = webAdresa;
             this.BrojTelefona = brojTelefona;
         }
+
+        public BankaPregled(int idBanka)
+        {
+            this.Id = idBanka;
+            this.Naziv = null;
+            this.AdresaCentrale = null;
+            this.BrojTelefona = null;
+        }
     }
 
     public class BankaBasic
@@ -188,6 +196,11 @@ namespace proejkt
             this.Nedelja = nedelja;
             this.Banka = b;
         }
+
+        public FilijalaPregled(int redniBroj)
+        {
+            this.RedniBroj = redniBroj;
+        }
     }
 
     public class FilijalaBasic
@@ -311,6 +324,11 @@ namespace proejkt
             this.DatumIsteka = datumIsteka;
             this.DatumIzdavanja = datumIzdavanja;
             this.Racun = r;
+        }
+
+        public KarticaPregled(string brojKartice)
+        {
+            this.BrojKartice = brojKartice;
         }
     }
 
@@ -592,6 +610,11 @@ namespace proejkt
             this.Klijent = k;
             this.Banka = b;
         }
+
+        public RacunPregled(string brojRacuna)
+        {
+            this.BrojRacuna = brojRacuna;
+        }
     }
 
     public class RacunBasic
@@ -620,6 +643,17 @@ namespace proejkt
             this.TrenutniSaldo = trenutniSaldo;
             this.Klijent = k;
             this.Banka = b;
+        }
+
+        public RacunBasic(string brojRacuna, string status, string valuta,
+                  DateTime datumOtvaranja, decimal trenutniSaldo)
+        {
+            this.BrojRacuna = brojRacuna;
+            this.Status = status;
+            this.Valuta = valuta;
+            this.DatumOtvaranja = datumOtvaranja;
+            this.TrenutniSaldo = trenutniSaldo;
+            this.Kartice = new List<KarticaBasic>();
         }
     }
     #endregion
@@ -789,6 +823,14 @@ namespace proejkt
             this.GPS = gps;
             this.Filijala = f;
             this.Banka = b;
+        }
+
+
+        public UredjajPregled(int id)
+        {
+            this.IdUredjaja = id;
+            this.Filijala = null;
+            this.Banka = null;
         }
     }
 
