@@ -63,6 +63,37 @@ namespace proejkt
             return k;
         }
 
+        public static List<RacunPregled> vratiRacuneZaKlijenta(int idKlijenta)
+        {
+            List<RacunPregled> racuni = new List<RacunPregled>();
+
+            try
+            {
+                using (ISession s = DataLayer.GetSession())
+                {
+                    var lista = s.Query<proejkt.Entiteti.Racun>()
+                                 .Where(r => r.Klijent.IdKlijenta == idKlijenta);
+
+                    foreach (var r in lista)
+                    {
+                        var klijentPregled = new KlijentPregled(r.Klijent.IdKlijenta);
+                        var bankaPregled = new BankaPregled(r.Banka.Id);
+                        racuni.Add(new RacunPregled(
+                            r.BrojRacuna,
+                            r.Status,
+                            r.Valuta,
+                            r.DatumOtvaranja,
+                            r.TrenutniSaldo,
+                            klijentPregled,
+                            bankaPregled));
+                    }
+                }
+            }
+            catch { }
+
+            return racuni;
+        }
+
         public static void dodajKlijenta(KlijentBasic k)
         {
             try
@@ -557,6 +588,67 @@ namespace proejkt
             {
                 return null;
             }
+        }
+
+        public static List<TransakcijaPregled> vratiTransakcijeZaKarticu(string brojKartice)
+        {
+            List<TransakcijaPregled> transakcije = new List<TransakcijaPregled>();
+
+            try
+            {
+                using (ISession s = DataLayer.GetSession())
+                {
+                    var lista = s.Query<proejkt.Entiteti.Transakcija>()
+                                 .Where(t => t.Kartica.BrojKartice == brojKartice);
+
+                    foreach (var t in lista)
+                    {
+                        var karticaPregled = new KarticaPregled(t.Kartica.BrojKartice);
+                        var uredjajPregled = new UredjajPregled(t.Uredjaj.IdUredjaja);
+
+                        transakcije.Add(new TransakcijaPregled(
+                            t.IdTransakcije,
+                            t.Valuta,
+                            t.Datum,
+                            t.Status,
+                            t.Iznos,
+                            t.RazlogNeuspeha,
+                            t.Vreme,
+                            t.VrstaTransakcije,
+                            karticaPregled,
+                            uredjajPregled));
+                    }
+                }
+            }
+            catch { }
+
+            return transakcije;
+        }
+
+        public static RacunPregled vratiRacunZaKarticu(string brojKartice)
+        {
+            try
+            {
+                using (ISession s = DataLayer.GetSession())
+                {
+                    var kartica = s.Get<proejkt.Entiteti.Kartica>(brojKartice);
+                    if (kartica == null) return null;
+
+                    var r = kartica.Racun;
+                    var klijentPregled = new KlijentPregled(r.Klijent.IdKlijenta);
+                    var bankaPregled = new BankaPregled(r.Banka.Id);
+
+                    return new RacunPregled(
+                        r.BrojRacuna,
+                        r.Status,
+                        r.Valuta,
+                        r.DatumOtvaranja,
+                        r.TrenutniSaldo,
+                        klijentPregled,
+                        bankaPregled);
+                }
+            }
+            catch { return null; }
         }
 
 
@@ -1079,6 +1171,41 @@ namespace proejkt
             {
                 return null;
             }
+        }
+
+        public static List<TransakcijaPregled> vratiTransakcijeZaUredjaj(int idUredjaja)
+        {
+            List<TransakcijaPregled> transakcije = new List<TransakcijaPregled>();
+
+            try
+            {
+                using (ISession s = DataLayer.GetSession())
+                {
+                    var lista = s.Query<proejkt.Entiteti.Transakcija>()
+                                 .Where(t => t.Uredjaj.IdUredjaja == idUredjaja);
+
+                    foreach (var t in lista)
+                    {
+                        var karticaPregled = new KarticaPregled(t.Kartica.BrojKartice);
+                        var uredjajPregled = new UredjajPregled(t.Uredjaj.IdUredjaja);
+
+                        transakcije.Add(new TransakcijaPregled(
+                            t.IdTransakcije,
+                            t.Valuta,
+                            t.Datum,
+                            t.Status,
+                            t.Iznos,
+                            t.RazlogNeuspeha,
+                            t.Vreme,
+                            t.VrstaTransakcije,
+                            karticaPregled,
+                            uredjajPregled));
+                    }
+                }
+            }
+            catch { }
+
+            return transakcije;
         }
 
         public static void dodajUredjaj(UredjajBasic u)
@@ -1698,6 +1825,104 @@ namespace proejkt
             }
         }
 
+        public static List<FilijalaPregled> vratiFilijaleZaBanku(int bankaId)
+        {
+            List<FilijalaPregled> filijale = new List<FilijalaPregled>();
+
+            try
+            {
+                using (ISession s = DataLayer.GetSession())
+                {
+                    var sveFilijale = s.Query<proejkt.Entiteti.Filijala>()
+                                         .Where(f => f.Banka.Id == bankaId);
+
+                    foreach (var f in sveFilijale)
+                    {
+                        var bankaPregled = new BankaPregled(f.Banka.Id);
+                        filijale.Add(new FilijalaPregled(
+                            f.RedniBroj,
+                            f.Adresa,
+                            f.RadniDan,
+                            f.Subota,
+                            f.Nedelja,
+                            bankaPregled
+                        ));
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+            }
+
+            return filijale;
+        }
+
+        public static List<UredjajPregled> vratiUredjajZaBanku(int idBanke)
+        {
+            List<UredjajPregled> uredjaji = new List<UredjajPregled>();
+
+            try
+            {
+                using (ISession s = DataLayer.GetSession())
+                {
+                    var lista = s.Query<proejkt.Entiteti.Uredjaj>()
+                                 .Where(u => u.Banka.Id == idBanke);
+
+                    foreach (var u in lista)
+                    {
+                        var filijalaPregled = new FilijalaPregled(u.Filijala.RedniBroj);
+                        var bankaPregled = new BankaPregled(u.Banka.Id);
+
+                        uredjaji.Add(new UredjajPregled(
+                            u.IdUredjaja,
+                            u.Proizvodjac,
+                            u.StatusRada,
+                            u.PoslednjiServis,
+                            u.DatumInstalacije,
+                            u.DodatniKomentar,
+                            u.Adresa,
+                            u.GPS,
+                            filijalaPregled,
+                            bankaPregled));
+                    }
+                }
+            }
+            catch { }
+
+            return uredjaji;
+        }
+
+        public static List<RacunPregled> vratiRacuneZaBanku(int idBanke)
+        {
+            List<RacunPregled> racuni = new List<RacunPregled>();
+
+            try
+            {
+                using (ISession s = DataLayer.GetSession())
+                {
+                    var lista = s.Query<proejkt.Entiteti.Racun>()
+                                 .Where(r => r.Banka.Id == idBanke);
+
+                    foreach (var r in lista)
+                    {
+                        var klijentPregled = new KlijentPregled(r.Klijent.IdKlijenta);
+                        var bankaPregled = new BankaPregled(r.Banka.Id);
+                        racuni.Add(new RacunPregled(
+                            r.BrojRacuna,
+                            r.Status,
+                            r.Valuta,
+                            r.DatumOtvaranja,
+                            r.TrenutniSaldo,
+                            klijentPregled,
+                            bankaPregled));
+                    }
+                }
+            }
+            catch { }
+
+            return racuni;
+        }
+
         public static void dodajBanku(BankaBasic b)
         {
             try
@@ -1827,6 +2052,41 @@ namespace proejkt
             {
                 return null;
             }
+        }
+
+        public static List<UredjajPregled> vratiUredjajZaFilijalu(int redniBrojFilijale)
+        {
+            List<UredjajPregled> uredjaji = new List<UredjajPregled>();
+
+            try
+            {
+                using (ISession s = DataLayer.GetSession())
+                {
+                    var lista = s.Query<proejkt.Entiteti.Uredjaj>()
+                                 .Where(u => u.Filijala.RedniBroj == redniBrojFilijale);
+
+                    foreach (var u in lista)
+                    {
+                        var filijalaPregled = new FilijalaPregled(u.Filijala.RedniBroj);
+                        var bankaPregled = new BankaPregled(u.Banka.Id);
+
+                        uredjaji.Add(new UredjajPregled(
+                            u.IdUredjaja,
+                            u.Proizvodjac,
+                            u.StatusRada,
+                            u.PoslednjiServis,
+                            u.DatumInstalacije,
+                            u.DodatniKomentar,
+                            u.Adresa,
+                            u.GPS,
+                            filijalaPregled,
+                            bankaPregled));
+                    }
+                }
+            }
+            catch { }
+
+            return uredjaji;
         }
 
         public static void dodajFilijalu(FilijalaBasic f)
@@ -2336,6 +2596,41 @@ namespace proejkt
             }
         }
 
+        public static List<TransakcijaPregled> vratiTransakcijeZaUredjaj(int idUredjaja)
+        {
+            List<TransakcijaPregled> transakcije = new List<TransakcijaPregled>();
+
+            try
+            {
+                using (ISession s = DataLayer.GetSession())
+                {
+                    var lista = s.Query<proejkt.Entiteti.Transakcija>()
+                                 .Where(t => t.Uredjaj.IdUredjaja == idUredjaja);
+
+                    foreach (var t in lista)
+                    {
+                        var karticaPregled = new KarticaPregled(t.Kartica.BrojKartice);
+                        var uredjajPregled = new UredjajPregled(t.Uredjaj.IdUredjaja);
+
+                        transakcije.Add(new TransakcijaPregled(
+                            t.IdTransakcije,
+                            t.Valuta,
+                            t.Datum,
+                            t.Status,
+                            t.Iznos,
+                            t.RazlogNeuspeha,
+                            t.Vreme,
+                            t.VrstaTransakcije,
+                            karticaPregled,
+                            uredjajPregled));
+                    }
+                }
+            }
+            catch { }
+
+            return transakcije;
+        }
+
         public static void dodajTransakciju(TransakcijaBasic t)
         {
             try
@@ -2419,4 +2714,5 @@ namespace proejkt
         }
         #endregion
 
+    }
     }
