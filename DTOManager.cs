@@ -2596,40 +2596,7 @@ namespace proejkt
             }
         }
 
-        public static List<TransakcijaPregled> vratiTransakcijeZaUredjaj(int idUredjaja)
-        {
-            List<TransakcijaPregled> transakcije = new List<TransakcijaPregled>();
 
-            try
-            {
-                using (ISession s = DataLayer.GetSession())
-                {
-                    var lista = s.Query<proejkt.Entiteti.Transakcija>()
-                                 .Where(t => t.Uredjaj.IdUredjaja == idUredjaja);
-
-                    foreach (var t in lista)
-                    {
-                        var karticaPregled = new KarticaPregled(t.Kartica.BrojKartice);
-                        var uredjajPregled = new UredjajPregled(t.Uredjaj.IdUredjaja);
-
-                        transakcije.Add(new TransakcijaPregled(
-                            t.IdTransakcije,
-                            t.Valuta,
-                            t.Datum,
-                            t.Status,
-                            t.Iznos,
-                            t.RazlogNeuspeha,
-                            t.Vreme,
-                            t.VrstaTransakcije,
-                            karticaPregled,
-                            uredjajPregled));
-                    }
-                }
-            }
-            catch { }
-
-            return transakcije;
-        }
 
         public static void dodajTransakciju(TransakcijaBasic t)
         {
