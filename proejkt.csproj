@@ -131,17 +131,53 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forme\DodajKlijentaForma.cs">
+    <Compile Include="Forme\BankaForma.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forme\DodajKlijentaForma.Designer.cs">
-      <DependentUpon>DodajKlijentaForma.cs</DependentUpon>
+    <Compile Include="Forme\BankaForma.Designer.cs">
+      <DependentUpon>BankaForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\FilijaleForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\FilijaleForma.Designer.cs">
+      <DependentUpon>FilijaleForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\KarticaForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\KarticaForma.Designer.cs">
+      <DependentUpon>KarticaForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\KlijentForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\KlijentForma.Designer.cs">
+      <DependentUpon>KlijentForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\RacunForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\RacunForma.Designer.cs">
+      <DependentUpon>RacunForma.cs</DependentUpon>
     </Compile>
     <Compile Include="Forme\testForma.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forme\testForma.Designer.cs">
       <DependentUpon>testForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\TransakcijeForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\TransakcijeForma.Designer.cs">
+      <DependentUpon>TransakcijeForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\UredjajForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\UredjajForma.Designer.cs">
+      <DependentUpon>UredjajForma.cs</DependentUpon>
     </Compile>
     <Compile Include="Mapiranja\BankaMapiranja.cs" />
     <Compile Include="Mapiranja\BankomatMapiranja.cs" />
@@ -165,9 +201,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forme\DodajKlijentaForma.resx">
-      <DependentUpon>DodajKlijentaForma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
