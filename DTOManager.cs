@@ -1636,6 +1636,40 @@ namespace proejkt
 
         #region Bankomat
 
+
+        public static void dodajBankomat(BankomatBasic b)
+        {
+            try
+            {
+                using (ISession s = DataLayer.GetSession())
+                {
+                    var filijala = s.Load<proejkt.Entiteti.Filijala>(b.Filijala.RedniBroj);
+                    var banka = s.Load<proejkt.Entiteti.Banka>(b.Banka.Id);
+
+                    var novi = new proejkt.Entiteti.Bankomat
+                    {
+                        Proizvodjac = b.Proizvodjac,
+                        StatusRada = b.StatusRada,
+                        PoslednjiServis = b.PoslednjiServis,
+                        DatumInstalacije = b.DatumInstalacije,
+                        DodatniKomentar = b.DodatniKomentar,
+                        Adresa = b.Adresa,
+                        GPS = b.GPS,
+                        Filijala = filijala,
+                        Banka = banka,
+                        MaxIznos = b.MaxIznos,
+                        BrojNovcanica = b.BrojNovcanica
+                    };
+
+                    s.SaveOrUpdate(novi);
+                    s.Flush();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Greska kod dodajBankomat: " + ex.Message);
+            }
+        }
         public static List<BankomatPregled> vratiSveBankomate()
         {
             List<BankomatPregled> bankomati = new List<BankomatPregled>();

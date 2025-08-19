@@ -137,6 +137,12 @@
     <Compile Include="Forme\BankaForma.Designer.cs">
       <DependentUpon>BankaForma.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forme\DodajKarticuForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\DodajKarticuForma.Designer.cs">
+      <DependentUpon>DodajKarticuForma.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forme\FilijaleForma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,6 +207,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\DodajKarticuForma.resx">
+      <DependentUpon>DodajKarticuForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\KarticaForma.resx">
+      <DependentUpon>KarticaForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\UredjajForma.resx">
+      <DependentUpon>UredjajForma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
