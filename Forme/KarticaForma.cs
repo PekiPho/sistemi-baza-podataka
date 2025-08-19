@@ -57,5 +57,28 @@ namespace proejkt.Forme
                 this.popuniPodacima();
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if(listView1.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Izaberite karticu");
+                return;
+            }
+            string brojKartice = listView1.SelectedItems[0].SubItems[0].Text;
+            KarticaPregled k = DTOManager.vratiKarticu(brojKartice);
+
+            KarticaBasic kartica = new KarticaBasic(
+                k.BrojKartice,
+                k.DatumIsteka,
+                k.DatumIzdavanja,
+                new RacunBasic(k.Racun.BrojRacuna,"","",DateTime.Now,0));
+            IzmeniKarticuForma nf = new IzmeniKarticuForma(kartica);
+            this.Hide();
+            nf.ShowDialog();
+            this.Show();
+
+            this.popuniPodacima();
+        }
     }
 }

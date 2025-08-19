@@ -149,6 +149,12 @@
     <Compile Include="Forme\FilijaleForma.Designer.cs">
       <DependentUpon>FilijaleForma.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forme\IzmeniKarticuForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\IzmeniKarticuForma.Designer.cs">
+      <DependentUpon>IzmeniKarticuForma.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forme\KarticaForma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,12 +172,6 @@
     </Compile>
     <Compile Include="Forme\RacunForma.Designer.cs">
       <DependentUpon>RacunForma.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forme\testForma.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forme\testForma.Designer.cs">
-      <DependentUpon>testForma.cs</DependentUpon>
     </Compile>
     <Compile Include="Forme\TransakcijeForma.cs">
       <SubType>Form</SubType>
@@ -210,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\DodajKarticuForma.resx">
       <DependentUpon>DodajKarticuForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\IzmeniKarticuForma.resx">
+      <DependentUpon>IzmeniKarticuForma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\KarticaForma.resx">
       <DependentUpon>KarticaForma.cs</DependentUpon>
