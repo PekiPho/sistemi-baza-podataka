@@ -9,7 +9,7 @@ namespace proejkt.Entiteti
     public class Racun
     {
 
-        public virtual string BrojRacuna { get; protected set; }
+        public virtual string BrojRacuna { get; set; }
 
         public virtual string Status { get; set; }
 

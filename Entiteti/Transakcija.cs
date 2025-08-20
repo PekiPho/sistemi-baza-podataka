@@ -8,7 +8,7 @@ namespace proejkt.Entiteti
 {
     public class Transakcija
     {
-        public virtual int IdTransakcije { get; protected set; }
+        public virtual int IdTransakcije { get; set; }
 
         public virtual string  Valuta { get; set; }
 

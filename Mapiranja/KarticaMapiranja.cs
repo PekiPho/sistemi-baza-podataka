@@ -14,7 +14,7 @@ namespace proejkt.Mapiranja
         {
             Table("KARTICA");
 
-            Id(el => el.BrojKartice).Column("BROJ_KARTICE").GeneratedBy.TriggerIdentity();
+            Id(el => el.BrojKartice).Column("BROJ_KARTICE").GeneratedBy.Assigned();
 
             Map(el => el.DatumIsteka).Column("DATUM_ISTEKA");
             Map(el => el.DatumIzdavanja).Column("DATUM_IZDAVANJA");

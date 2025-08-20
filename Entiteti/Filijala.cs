@@ -8,7 +8,7 @@ namespace proejkt.Entiteti
 {
     public class Filijala
     {
-        public virtual int RedniBroj { get; protected set; }
+        public virtual int RedniBroj { get; set; }
 
         public virtual string Adresa { get; set; }
 

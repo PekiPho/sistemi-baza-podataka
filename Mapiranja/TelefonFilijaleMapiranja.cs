@@ -14,7 +14,7 @@ namespace proejkt.Mapiranja
         {
             Table("TELEFON_FILIJALE");
 
-            Id(el => el.Id).Column("ID").GeneratedBy.TriggerIdentity();
+            Id(el => el.Id).Column("ID").GeneratedBy.Assigned();
 
             Map(el => el.Telefon).Column("TELEFON_FILIJALE");
 

@@ -100,7 +100,7 @@ namespace proejkt
             {
                 ISession s = DataLayer.GetSession();
 
-                var novi = new proejkt.Entiteti.Klijent();
+                var novi = new proejkt.Entiteti.Klijent { IdKlijenta = k.IdKlijenta};
 
                 s.SaveOrUpdate(novi);
                 s.Flush();
@@ -662,6 +662,7 @@ namespace proejkt
 
                     var nova = new proejkt.Entiteti.Kartica
                     {
+                        BrojKartice = k.BrojKartice,
                         DatumIsteka = k.DatumIsteka,
                         DatumIzdavanja = k.DatumIzdavanja,
                         Racun = racun
@@ -673,7 +674,7 @@ namespace proejkt
             }
             catch(Exception ex)
             {
-
+                Console.WriteLine(ex.Message);
             }
         }
 
@@ -782,6 +783,7 @@ namespace proejkt
 
                     var nova = new proejkt.Entiteti.Debitna
                     {
+                        BrojKartice = d.BrojKartice,
                         DatumIsteka = d.DatumIsteka,
                         DatumIzdavanja = d.DatumIzdavanja,
                         Racun = racun,
@@ -917,6 +919,7 @@ namespace proejkt
 
                     var nova = new proejkt.Entiteti.Kreditna
                     {
+                        BrojKartice = k.BrojKartice,
                         DatumIsteka = k.DatumIsteka,
                         DatumIzdavanja = k.DatumIzdavanja,
                         Racun = racun,
@@ -1042,6 +1045,7 @@ namespace proejkt
 
                     var novi = new proejkt.Entiteti.Racun
                     {
+                        BrojRacuna = r.BrojRacuna,
                         Status = r.Status,
                         Valuta = r.Valuta,
                         DatumOtvaranja = r.DatumOtvaranja,
@@ -1219,6 +1223,7 @@ namespace proejkt
 
                     var novi = new proejkt.Entiteti.Uredjaj
                     {
+                        IdUredjaja = u.IdUredjaja,
                         Proizvodjac = u.Proizvodjac,
                         StatusRada = u.StatusRada,
                         PoslednjiServis = u.PoslednjiServis,
@@ -1965,6 +1970,7 @@ namespace proejkt
                 {
                     var nova = new proejkt.Entiteti.Banka
                     {
+                        Id = b.Id,
                         Naziv = b.Naziv,
                         Email = b.Email,
                         AdresaCentrale = b.AdresaCentrale,
@@ -2133,6 +2139,7 @@ namespace proejkt
 
                     var nova = new proejkt.Entiteti.Filijala
                     {
+                        RedniBroj = f.RedniBroj,
                         Adresa = f.Adresa,
                         RadniDan = f.RadniDan,
                         Subota = f.Subota,
@@ -2261,6 +2268,7 @@ namespace proejkt
 
                     var novi = new proejkt.Entiteti.PodrzaniServisi
                     {
+                        Id = p.Id,
                         Servis = p.Servis,
                         Uredjaj = uredjaj
                     };
@@ -2384,6 +2392,7 @@ namespace proejkt
 
                     var novi = new proejkt.Entiteti.BrojTelefona
                     {
+                        Id = b.Id,
                         Telefon = b.Telefon,
                         Klijent = klijent
                     };
@@ -2502,7 +2511,8 @@ namespace proejkt
                     var filijala = s.Load<proejkt.Entiteti.Filijala>(t.Filijala.RedniBroj);
 
                     var novi = new proejkt.Entiteti.TelefonFilijale
-                    {
+                    {   
+                        Id = t.Id,
                         Telefon = t.Telefon,
                         Filijala = filijala
                     };
@@ -2643,6 +2653,7 @@ namespace proejkt
 
                     var nova = new proejkt.Entiteti.Transakcija
                     {
+                        IdTransakcije = t.IdTransakcije,
                         Valuta = t.Valuta,
                         Datum = t.Datum,
                         Status = t.Status,

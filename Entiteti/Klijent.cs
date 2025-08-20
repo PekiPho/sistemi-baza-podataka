@@ -8,7 +8,7 @@ namespace proejkt.Entiteti
 {
     public class Klijent
     {
-        public virtual int IdKlijenta { get; protected set; }
+        public virtual int IdKlijenta { get; set; }
 
         public virtual IList<Racun> Racuni { get; set; }
 

@@ -9,7 +9,7 @@ namespace proejkt.Entiteti
     public class Banka
     {
 
-        public virtual int Id { get; protected set; }
+        public virtual int Id { get; set; }
 
         public virtual string Naziv { get; set; }
 

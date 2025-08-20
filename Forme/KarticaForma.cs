@@ -35,6 +35,7 @@ namespace proejkt.Forme
             this.Hide();
             nf.ShowDialog();
             this.Show();
+            this.popuniPodacima();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -79,6 +80,27 @@ namespace proejkt.Forme
             this.Show();
 
             this.popuniPodacima();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            DebitnaForma nf = new DebitnaForma();
+            this.Hide();
+            nf.ShowDialog();
+            this.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            KreditnaForma nf = new KreditnaForma();
+            this.Hide();
+            nf.ShowDialog();
+            this.Show();
+        }
+
+        private void KarticaForma_Load(object sender, EventArgs e)
+        {
+            popuniPodacima();
         }
     }
 }

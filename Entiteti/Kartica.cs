@@ -8,7 +8,7 @@ namespace proejkt.Entiteti
 {
     public class Kartica
     {
-        public virtual string BrojKartice { get; protected set; }
+        public virtual string BrojKartice { get; set; }
 
         public virtual DateTime DatumIsteka { get; set; }
 

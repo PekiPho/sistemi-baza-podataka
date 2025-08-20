@@ -12,7 +12,7 @@ namespace proejkt.Mapiranja
     {
         public FilijalaMapiranja() 
         {
-            Id(el => el.RedniBroj).Column("REDNI_BROJ").GeneratedBy.TriggerIdentity();
+            Id(el => el.RedniBroj).Column("REDNI_BROJ").GeneratedBy.Assigned();
 
             Map(el => el.Adresa).Column("ADRESA");
             Map(el => el.RadniDan).Column("RADNI_DAN");

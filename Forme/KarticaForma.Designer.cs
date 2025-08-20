@@ -106,6 +106,7 @@
             this.button5.TabIndex = 1;
             this.button5.Text = "Kreditna";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -115,6 +116,7 @@
             this.button4.TabIndex = 0;
             this.button4.Text = "Debitna";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // groupBox3
             // 
@@ -134,7 +136,7 @@
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(6, 14);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(338, 293);
+            this.listView1.Size = new System.Drawing.Size(338, 299);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -163,6 +165,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "KarticaForma";
             this.Text = "KarticaForma";
+            this.Load += new System.EventHandler(this.KarticaForma_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
