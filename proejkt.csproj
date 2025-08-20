@@ -161,6 +161,12 @@
     <Compile Include="Forme\DodajKreditnuForma.Designer.cs">
       <DependentUpon>DodajKreditnuForma.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forme\DodajRacunForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\DodajRacunForma.Designer.cs">
+      <DependentUpon>DodajRacunForma.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forme\DodajTransakcijuForma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +196,12 @@
     </Compile>
     <Compile Include="Forme\IzmeniKreditnuForma.Designer.cs">
       <DependentUpon>IzmeniKreditnuForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\IzmeniRacunForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\IzmeniRacunForma.Designer.cs">
+      <DependentUpon>IzmeniRacunForma.cs</DependentUpon>
     </Compile>
     <Compile Include="Forme\IzmeniTransakcijuForma.cs">
       <SubType>Form</SubType>
@@ -268,6 +280,9 @@
     <EmbeddedResource Include="Forme\DodajKreditnuForma.resx">
       <DependentUpon>DodajKreditnuForma.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forme\DodajRacunForma.resx">
+      <DependentUpon>DodajRacunForma.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forme\DodajTransakcijuForma.resx">
       <DependentUpon>DodajTransakcijuForma.cs</DependentUpon>
     </EmbeddedResource>
@@ -280,6 +295,9 @@
     <EmbeddedResource Include="Forme\IzmeniKreditnuForma.resx">
       <DependentUpon>IzmeniKreditnuForma.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forme\IzmeniRacunForma.resx">
+      <DependentUpon>IzmeniRacunForma.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forme\IzmeniTransakcijuForma.resx">
       <DependentUpon>IzmeniTransakcijuForma.cs</DependentUpon>
     </EmbeddedResource>
@@ -288,6 +306,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\KreditnaForma.resx">
       <DependentUpon>KreditnaForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\RacunForma.resx">
+      <DependentUpon>RacunForma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\TransakcijeForma.resx">
       <DependentUpon>TransakcijeForma.cs</DependentUpon>

@@ -1013,7 +1013,7 @@ namespace proejkt
             return racuni;
         }
 
-        public static RacunPregled vratiRacun(int brojRacuna)
+        public static RacunPregled vratiRacun(string brojRacuna)
         {
             try
             {
@@ -1094,7 +1094,7 @@ namespace proejkt
             }
         }
 
-        public static void obrisiRacun(int brojRacuna)
+        public static void obrisiRacun(string brojRacuna)
         {
             try
             {
