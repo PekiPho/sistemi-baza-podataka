@@ -143,6 +143,12 @@
     <Compile Include="Forme\DebitnaForma.Designer.cs">
       <DependentUpon>DebitnaForma.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forme\DodajBankuForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\DodajBankuForma.Designer.cs">
+      <DependentUpon>DodajBankuForma.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forme\DodajDebitnuForma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,11 +179,11 @@
     <Compile Include="Forme\DodajTransakcijuForma.Designer.cs">
       <DependentUpon>DodajTransakcijuForma.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forme\FilijaleForma.cs">
+    <Compile Include="Forme\IzmeniBankuForma.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forme\FilijaleForma.Designer.cs">
-      <DependentUpon>FilijaleForma.cs</DependentUpon>
+    <Compile Include="Forme\IzmeniBankuForma.Designer.cs">
+      <DependentUpon>IzmeniBankuForma.cs</DependentUpon>
     </Compile>
     <Compile Include="Forme\IzmeniDebitnuForma.cs">
       <SubType>Form</SubType>
@@ -268,8 +274,14 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forme\BankaForma.resx">
+      <DependentUpon>BankaForma.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forme\DebitnaForma.resx">
       <DependentUpon>DebitnaForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\DodajBankuForma.resx">
+      <DependentUpon>DodajBankuForma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\DodajDebitnuForma.resx">
       <DependentUpon>DodajDebitnuForma.cs</DependentUpon>
@@ -285,6 +297,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\DodajTransakcijuForma.resx">
       <DependentUpon>DodajTransakcijuForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\IzmeniBankuForma.resx">
+      <DependentUpon>IzmeniBankuForma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\IzmeniDebitnuForma.resx">
       <DependentUpon>IzmeniDebitnuForma.cs</DependentUpon>

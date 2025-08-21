@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace proejkt
 {
@@ -2139,7 +2140,7 @@ namespace proejkt
 
                     var nova = new proejkt.Entiteti.Filijala
                     {
-                        RedniBroj = f.RedniBroj,
+                        //RedniBroj = f.RedniBroj,
                         Adresa = f.Adresa,
                         RadniDan = f.RadniDan,
                         Subota = f.Subota,
@@ -2153,7 +2154,7 @@ namespace proejkt
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show("Greška pri dodavanju filijale: " + ex.Message);
             }
         }
 

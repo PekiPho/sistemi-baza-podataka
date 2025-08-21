@@ -15,7 +15,7 @@ namespace proejkt.Mapiranje
         {
             Table("BANKA");
 
-            Id(el => el.Id).Column("ID_BANKE").GeneratedBy.Assigned();
+            Id(el => el.Id).Column("ID_BANKE").GeneratedBy.TriggerIdentity();
 
             Map(el => el.Naziv).Column("NAZIV");
             Map(el => el.Email).Column("EMAIL");

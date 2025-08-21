@@ -15,6 +15,7 @@ namespace proejkt.Forme
         public RacunForma()
         {
             InitializeComponent();
+            this.popuniPodacima();
         }
         public void popuniPodacima()
         {

@@ -15,6 +15,7 @@ namespace proejkt.Forme
         public KarticaForma()
         {
             InitializeComponent();
+            popuniPodacima();
         }
         public void popuniPodacima()
         {

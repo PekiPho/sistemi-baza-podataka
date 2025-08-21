@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace proejkt.Forme
 {
@@ -15,6 +16,7 @@ namespace proejkt.Forme
         public TransakcijeForma()
         {
             InitializeComponent();
+            this.popuniPodacima();
         }
         public void popuniPodacima()
         {
