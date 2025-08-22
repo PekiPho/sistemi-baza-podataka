@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace proejkt.Forme
 {
-    public partial class testForma : Form
+    public partial class PravnaLicaForma : Form
     {
-        public testForma()
+        public PravnaLicaForma()
         {
             InitializeComponent();
         }

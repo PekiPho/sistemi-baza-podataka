@@ -12,6 +12,7 @@ namespace proejkt.Mapiranja
     {
         public FilijalaMapiranja() 
         {
+            Table("FILIJALA");
             Id(el => el.RedniBroj).Column("REDNI_BROJ").GeneratedBy.TriggerIdentity();
 
             Map(el => el.Adresa).Column("ADRESA");

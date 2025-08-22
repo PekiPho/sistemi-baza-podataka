@@ -131,17 +131,227 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forme\BankaForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\BankaForma.Designer.cs">
+      <DependentUpon>BankaForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\BankomatForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\BankomatForma.Designer.cs">
+      <DependentUpon>BankomatForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\DebitnaForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\DebitnaForma.Designer.cs">
+      <DependentUpon>DebitnaForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\DodajAutomatForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\DodajAutomatForma.Designer.cs">
+      <DependentUpon>DodajAutomatForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\DodajBankomatForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\DodajBankomatForma.Designer.cs">
+      <DependentUpon>DodajBankomatForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\DodajBankuForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\DodajBankuForma.Designer.cs">
+      <DependentUpon>DodajBankuForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\DodajDebitnuForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\DodajDebitnuForma.Designer.cs">
+      <DependentUpon>DodajDebitnuForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\DodajKarticuForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\DodajKarticuForma.Designer.cs">
+      <DependentUpon>DodajKarticuForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\DodajKioskForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\DodajKioskForma.Designer.cs">
+      <DependentUpon>DodajKioskForma.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forme\DodajKlijentaForma.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forme\DodajKlijentaForma.Designer.cs">
       <DependentUpon>DodajKlijentaForma.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forme\testForma.cs">
+    <Compile Include="Forme\DodajKreditnuForma.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forme\testForma.Designer.cs">
-      <DependentUpon>testForma.cs</DependentUpon>
+    <Compile Include="Forme\DodajKreditnuForma.Designer.cs">
+      <DependentUpon>DodajKreditnuForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\DodajRacunForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\DodajRacunForma.Designer.cs">
+      <DependentUpon>DodajRacunForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\DodajTransakcijuForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\DodajTransakcijuForma.Designer.cs">
+      <DependentUpon>DodajTransakcijuForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\DodajUredjajForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\DodajUredjajForma.Designer.cs">
+      <DependentUpon>DodajUredjajForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\FilijaleForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\FilijaleForma.Designer.cs">
+      <DependentUpon>FilijaleForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\FizickaLicaForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\FizickaLicaForma.Designer.cs">
+      <DependentUpon>FizickaLicaForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\IzmeniAutomatForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\IzmeniAutomatForma.Designer.cs">
+      <DependentUpon>IzmeniAutomatForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\IzmeniBankomatForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\IzmeniBankomatForma.Designer.cs">
+      <DependentUpon>IzmeniBankomatForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\IzmeniBankuForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\IzmeniBankuForma.Designer.cs">
+      <DependentUpon>IzmeniBankuForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\IzmeniDebitnuForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\IzmeniDebitnuForma.Designer.cs">
+      <DependentUpon>IzmeniDebitnuForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\IzmeniKarticuForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\IzmeniKarticuForma.Designer.cs">
+      <DependentUpon>IzmeniKarticuForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\IzmeniKioskForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\IzmeniKioskForma.Designer.cs">
+      <DependentUpon>IzmeniKioskForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\IzmeniKlijentaForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\IzmeniKlijentaForma.Designer.cs">
+      <DependentUpon>IzmeniKlijentaForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\IzmeniKreditnuForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\IzmeniKreditnuForma.Designer.cs">
+      <DependentUpon>IzmeniKreditnuForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\IzmeniRacunForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\IzmeniRacunForma.Designer.cs">
+      <DependentUpon>IzmeniRacunForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\IzmeniTransakcijuForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\IzmeniTransakcijuForma.Designer.cs">
+      <DependentUpon>IzmeniTransakcijuForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\IzmeniUredjajForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\IzmeniUredjajForma.Designer.cs">
+      <DependentUpon>IzmeniUredjajForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\KarticaForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\KarticaForma.Designer.cs">
+      <DependentUpon>KarticaForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\KioskForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\KioskForma.Designer.cs">
+      <DependentUpon>KioskForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\KlijentForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\KlijentForma.Designer.cs">
+      <DependentUpon>KlijentForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\KreditnaForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\KreditnaForma.Designer.cs">
+      <DependentUpon>KreditnaForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\OrganizacijeForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\OrganizacijeForma.Designer.cs">
+      <DependentUpon>OrganizacijeForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\PravnaLicaForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\PravnaLicaForma.Designer.cs">
+      <DependentUpon>PravnaLicaForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\RacunForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\RacunForma.Designer.cs">
+      <DependentUpon>RacunForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\TransakcijeForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\TransakcijeForma.Designer.cs">
+      <DependentUpon>TransakcijeForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\UplatniAutomatForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\UplatniAutomatForma.Designer.cs">
+      <DependentUpon>UplatniAutomatForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\UredjajForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\UredjajForma.Designer.cs">
+      <DependentUpon>UredjajForma.cs</DependentUpon>
     </Compile>
     <Compile Include="Mapiranja\BankaMapiranja.cs" />
     <Compile Include="Mapiranja\BankomatMapiranja.cs" />
@@ -166,8 +376,98 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forme\DodajKlijentaForma.resx">
-      <DependentUpon>DodajKlijentaForma.cs</DependentUpon>
+    <EmbeddedResource Include="Forme\BankaForma.resx">
+      <DependentUpon>BankaForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\BankomatForma.resx">
+      <DependentUpon>BankomatForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\DebitnaForma.resx">
+      <DependentUpon>DebitnaForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\DodajAutomatForma.resx">
+      <DependentUpon>DodajAutomatForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\DodajBankomatForma.resx">
+      <DependentUpon>DodajBankomatForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\DodajBankuForma.resx">
+      <DependentUpon>DodajBankuForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\DodajDebitnuForma.resx">
+      <DependentUpon>DodajDebitnuForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\DodajKarticuForma.resx">
+      <DependentUpon>DodajKarticuForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\DodajKioskForma.resx">
+      <DependentUpon>DodajKioskForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\DodajKreditnuForma.resx">
+      <DependentUpon>DodajKreditnuForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\DodajRacunForma.resx">
+      <DependentUpon>DodajRacunForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\DodajTransakcijuForma.resx">
+      <DependentUpon>DodajTransakcijuForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\DodajUredjajForma.resx">
+      <DependentUpon>DodajUredjajForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\IzmeniAutomatForma.resx">
+      <DependentUpon>IzmeniAutomatForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\IzmeniBankomatForma.resx">
+      <DependentUpon>IzmeniBankomatForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\IzmeniBankuForma.resx">
+      <DependentUpon>IzmeniBankuForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\IzmeniDebitnuForma.resx">
+      <DependentUpon>IzmeniDebitnuForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\IzmeniKarticuForma.resx">
+      <DependentUpon>IzmeniKarticuForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\IzmeniKioskForma.resx">
+      <DependentUpon>IzmeniKioskForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\IzmeniKreditnuForma.resx">
+      <DependentUpon>IzmeniKreditnuForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\IzmeniRacunForma.resx">
+      <DependentUpon>IzmeniRacunForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\IzmeniTransakcijuForma.resx">
+      <DependentUpon>IzmeniTransakcijuForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\IzmeniUredjajForma.resx">
+      <DependentUpon>IzmeniUredjajForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\KarticaForma.resx">
+      <DependentUpon>KarticaForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\KioskForma.resx">
+      <DependentUpon>KioskForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\KlijentForma.resx">
+      <DependentUpon>KlijentForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\KreditnaForma.resx">
+      <DependentUpon>KreditnaForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\RacunForma.resx">
+      <DependentUpon>RacunForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\TransakcijeForma.resx">
+      <DependentUpon>TransakcijeForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\UplatniAutomatForma.resx">
+      <DependentUpon>UplatniAutomatForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\UredjajForma.resx">
+      <DependentUpon>UredjajForma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

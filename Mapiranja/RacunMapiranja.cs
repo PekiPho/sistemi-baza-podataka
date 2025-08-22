@@ -14,7 +14,7 @@ namespace proejkt.Mapiranja
         {
             Table("RACUN");
 
-            Id(el => el.BrojRacuna).Column("BROJ_RACUNA").GeneratedBy.TriggerIdentity();
+            Id(el => el.BrojRacuna).Column("BROJ_RACUNA").GeneratedBy.Assigned();
 
             Map(el => el.Status).Column("STATUS");
             Map(el => el.Valuta).Column("VALUTA");

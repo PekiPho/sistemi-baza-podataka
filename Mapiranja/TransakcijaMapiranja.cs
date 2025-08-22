@@ -14,7 +14,7 @@ namespace proejkt.Mapiranja
         {
             Table("TRANSAKCIJA");
 
-            Id(el => el.IdTransakcije).Column("ID_TRANSAKCIJE").GeneratedBy.TriggerIdentity();
+            Id(el => el.IdTransakcije).Column("ID_TRANSAKCIJE").GeneratedBy.Assigned();
 
             Map(el => el.Valuta).Column("VALUTA");
             Map(el => el.Datum).Column("DATUM");

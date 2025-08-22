@@ -14,7 +14,7 @@ namespace proejkt.Mapiranja
         {
             Table("KLIJENT");
 
-            Id(el => el.IdKlijenta).Column("ID_KLIJENTA").GeneratedBy.TriggerIdentity();
+            Id(el => el.IdKlijenta).Column("ID_KLIJENTA").GeneratedBy.Assigned();
 
             HasMany(el => el.Racuni).KeyColumn("KLIJENTID").Cascade.All().Inverse();
         }

@@ -8,7 +8,7 @@ namespace proejkt.Entiteti
 {
     public class Uredjaj
     {
-        public virtual int IdUredjaja { get; protected set; }
+        public virtual int IdUredjaja { get; set; }
 
         public virtual string Proizvodjac { get; set; }
 
