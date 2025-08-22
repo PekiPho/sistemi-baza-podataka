@@ -185,6 +185,12 @@
     <Compile Include="Forme\DodajKioskForma.Designer.cs">
       <DependentUpon>DodajKioskForma.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forme\DodajKlijentaForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\DodajKlijentaForma.Designer.cs">
+      <DependentUpon>DodajKlijentaForma.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forme\DodajKreditnuForma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,6 +220,12 @@
     </Compile>
     <Compile Include="Forme\FilijaleForma.Designer.cs">
       <DependentUpon>FilijaleForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\FizickaLicaForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\FizickaLicaForma.Designer.cs">
+      <DependentUpon>FizickaLicaForma.cs</DependentUpon>
     </Compile>
     <Compile Include="Forme\IzmeniAutomatForma.cs">
       <SubType>Form</SubType>
@@ -250,6 +262,12 @@
     </Compile>
     <Compile Include="Forme\IzmeniKioskForma.Designer.cs">
       <DependentUpon>IzmeniKioskForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\IzmeniKlijentaForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\IzmeniKlijentaForma.Designer.cs">
+      <DependentUpon>IzmeniKlijentaForma.cs</DependentUpon>
     </Compile>
     <Compile Include="Forme\IzmeniKreditnuForma.cs">
       <SubType>Form</SubType>
@@ -298,6 +316,18 @@
     </Compile>
     <Compile Include="Forme\KreditnaForma.Designer.cs">
       <DependentUpon>KreditnaForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\OrganizacijeForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\OrganizacijeForma.Designer.cs">
+      <DependentUpon>OrganizacijeForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\PravnaLicaForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\PravnaLicaForma.Designer.cs">
+      <DependentUpon>PravnaLicaForma.cs</DependentUpon>
     </Compile>
     <Compile Include="Forme\RacunForma.cs">
       <SubType>Form</SubType>
@@ -420,6 +450,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\KioskForma.resx">
       <DependentUpon>KioskForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\KlijentForma.resx">
+      <DependentUpon>KlijentForma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\KreditnaForma.resx">
       <DependentUpon>KreditnaForma.cs</DependentUpon>
