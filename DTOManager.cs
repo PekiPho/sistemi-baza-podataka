@@ -37,9 +37,9 @@ namespace proejkt
             return klijenti;
         }
 
-        public static KlijentBasic vratiKlijenta(int id)
+        public static KlijentPregled vratiKlijenta(int id)
         {
-            KlijentBasic k = new KlijentBasic();
+            KlijentPregled k = new KlijentPregled();
 
             try
             {
@@ -47,12 +47,8 @@ namespace proejkt
 
                 proejkt.Entiteti.Klijent o = s.Load<proejkt.Entiteti.Klijent>(id);
 
-                k = new KlijentBasic(o.IdKlijenta);
+                k = new KlijentPregled(o.IdKlijenta);
 
-                foreach(var r in o.Racuni)
-                {
-                    k.Racuni.Add(new RacunBasic(r.BrojRacuna, r.Status, r.Valuta, r.DatumOtvaranja, r.TrenutniSaldo));
-                }
 
                 s.Close();
             }
@@ -1685,11 +1681,11 @@ namespace proejkt
 
             try
             {
-                using(ISession s= DataLayer.GetSession())
+                using (ISession s = DataLayer.GetSession())
                 {
                     var sviBankomati = s.Query<proejkt.Entiteti.Bankomat>();
 
-                    foreach(var b in sviBankomati)
+                    foreach (var b in sviBankomati)
                     {
                         var filijalaPregled = new FilijalaPregled(b.Filijala.RedniBroj);
                         var bankaPregled = new BankaPregled(b.Banka.Id);
@@ -1711,46 +1707,12 @@ namespace proejkt
                     }
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
 
             }
 
             return bankomati;
-        }
-
-        public static void dodajBankomat(BankomatBasic b)
-        {
-            try
-            {
-                using (ISession s = DataLayer.GetSession())
-                {
-                    var filijala = s.Load<proejkt.Entiteti.Filijala>(b.Filijala.RedniBroj);
-                    var banka = s.Load<proejkt.Entiteti.Banka>(b.Banka.Id);
-
-                    var novi = new proejkt.Entiteti.Bankomat
-                    {
-                        Proizvodjac = b.Proizvodjac,
-                        StatusRada = b.StatusRada,
-                        PoslednjiServis = b.PoslednjiServis,
-                        DatumInstalacije = b.DatumInstalacije,
-                        DodatniKomentar = b.DodatniKomentar,
-                        Adresa = b.Adresa,
-                        GPS = b.GPS,
-                        Filijala = filijala,
-                        Banka = banka,
-                        MaxIznos = b.MaxIznos,
-                        BrojNovcanica = b.BrojNovcanica
-                    };
-
-                    s.SaveOrUpdate(novi);
-                    s.Flush();
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Greska kod dodajBankomat: " + ex.Message);
-            }
         }
 
         public static BankomatPregled vratiBankomat(int idUredjaja)
@@ -2061,6 +2023,15 @@ namespace proejkt
                     var banka = s.Get<proejkt.Entiteti.Banka>(id);
 
                     if (banka == null) return;
+
+                    foreach (var racun in banka.Racuni)
+                        racun.Banka = null;
+
+                    foreach (var uredjaj in banka.Uredjaji)
+                        uredjaj.Banka = null;
+
+                    foreach (var filijala in banka.Filijale)
+                        filijala.Banka = null;
 
                     s.Delete(banka);
                     s.Flush();
