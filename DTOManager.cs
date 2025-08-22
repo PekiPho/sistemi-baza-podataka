@@ -1388,6 +1388,7 @@ namespace proejkt
 
                     var novi = new proejkt.Entiteti.UplatniAutomat
                     {
+                        IdUredjaja = u.IdUredjaja,
                         Proizvodjac = u.Proizvodjac,
                         StatusRada = u.StatusRada,
                         PoslednjiServis = u.PoslednjiServis,
@@ -1559,6 +1560,7 @@ namespace proejkt
 
                     var novi = new proejkt.Entiteti.Kiosk
                     {
+                        IdUredjaja = k.IdUredjaja,
                         Proizvodjac = k.Proizvodjac,
                         StatusRada = k.StatusRada,
                         PoslednjiServis = k.PoslednjiServis,
@@ -1654,6 +1656,7 @@ namespace proejkt
 
                     var novi = new proejkt.Entiteti.Bankomat
                     {
+                        IdUredjaja = b.IdUredjaja,
                         Proizvodjac = b.Proizvodjac,
                         StatusRada = b.StatusRada,
                         PoslednjiServis = b.PoslednjiServis,

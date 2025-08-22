@@ -15,6 +15,7 @@ namespace proejkt.Forme
         public DebitnaForma()
         {
             InitializeComponent();
+            popuniPodacima();
         }
 
         public void popuniPodacima()
@@ -24,7 +25,7 @@ namespace proejkt.Forme
 
             foreach (DebitnaPregled k in kartica)
             {
-                ListViewItem item = new ListViewItem(new string[] { k.BrojKartice, k.DatumIsteka.ToString("dd/MM/yyyy"), k.DatumIzdavanja.ToString("dd/MM/yyyy"), k.DnevniLimit.ToString()});
+                ListViewItem item = new ListViewItem(new string[] { k.BrojKartice,k.DnevniLimit.ToString()});
                 listView1.Items.Add(item);
             }
             listView1.Refresh();

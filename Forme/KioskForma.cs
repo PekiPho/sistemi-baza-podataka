@@ -10,30 +10,28 @@ using System.Windows.Forms;
 
 namespace proejkt.Forme
 {
-    public partial class KreditnaForma : Form
+    public partial class KioskForma : Form
     {
-        public KreditnaForma()
+        public KioskForma()
         {
             InitializeComponent();
             popuniPodacima();
         }
-
+        
         public void popuniPodacima()
         {
             listView1.Items.Clear();
-            List<KreditnaPregled> kartica = DTOManager.vratiSveKreditneKartice();
-
-            foreach (KreditnaPregled k in kartica)
+            List<KioskPregled> kiosk = DTOManager.vratiSveKioske();
+            foreach (KioskPregled k in kiosk)
             {
-                ListViewItem item = new ListViewItem(new string[] { k.BrojKartice, k.MesecniLimit.ToString(),k.MaxPeriodOtplate.ToString() });
+                ListViewItem item = new ListViewItem(new string[] {k.IdUredjaja.ToString(),k.Skener, k.Stampac});
                 listView1.Items.Add(item);
             }
             listView1.Refresh();
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            DodajKreditnuForma nf = new DodajKreditnuForma();
+            DodajKioskForma nf = new DodajKioskForma();
             this.Hide();
             nf.ShowDialog();
             this.Show();
@@ -44,18 +42,17 @@ namespace proejkt.Forme
         {
             if (listView1.SelectedItems.Count == 0)
             {
-                MessageBox.Show("Izaberite kreditnu karticu!");
+                MessageBox.Show("Izaberite kiosk!");
                 return;
             }
-            string brojkreditneKartice = listView1.SelectedItems[0].SubItems[0].Text;
-            string poruka = "Da li zelite da obrisete izabranu karticu?";
+            int idKioska = int.Parse(listView1.SelectedItems[0].SubItems[0].Text);
+            string poruka = "Da li zelite da obrisete izabrani kiosk?";
             string title = "Pitanje";
             MessageBoxButtons buttons = MessageBoxButtons.OKCancel;
             DialogResult result = MessageBox.Show(poruka, title, buttons);
-
             if (result == DialogResult.OK)
             {
-                DTOManager.obrisiKreditnuKarticu(brojkreditneKartice);
+                DTOManager.obrisiKiosk(idKioska);
                 MessageBox.Show("Uspesno!");
                 this.popuniPodacima();
             }
@@ -65,24 +62,29 @@ namespace proejkt.Forme
         {
             if (listView1.SelectedItems.Count == 0)
             {
-                MessageBox.Show("Izaberite kreditnu karticu");
+                MessageBox.Show("Izaberite kiosk!");
                 return;
             }
-            string brojkreditneKartice = listView1.SelectedItems[0].SubItems[0].Text;
-            KreditnaPregled k = DTOManager.vratiKreditnuKarticu(brojkreditneKartice);
+            int idKioska = int.Parse(listView1.SelectedItems[0].SubItems[0].Text);
+            KioskPregled k = DTOManager.vratiKiosk(idKioska);
 
-            KreditnaBasic kartica = new KreditnaBasic(
-                k.BrojKartice,
-                k.DatumIsteka,
-                k.DatumIzdavanja,
-                new RacunBasic(k.Racun.BrojRacuna, "", "", DateTime.Now, 0),
-                k.MesecniLimit,
-                k.MaxPeriodOtplate);
-            IzmeniKreditnuForma nf = new IzmeniKreditnuForma(kartica);
+            KioskBasic kiosk = new KioskBasic(
+                k.IdUredjaja,
+                k.Proizvodjac,
+                k.StatusRada,
+                k.PoslednjiServis,
+                k.DatumInstalacije,
+                k.DodatniKomentar,
+                k.Adresa,
+                k.GPS,
+                new FilijalaBasic(k.Filijala.RedniBroj, "", "", "", "", null),
+                new BankaBasic(k.Banka.Id, "", "", "", "", ""),
+                k.Skener,
+                k.Stampac);
+            IzmeniKioskForma nf = new IzmeniKioskForma(kiosk);
             this.Hide();
             nf.ShowDialog();
             this.Show();
-
             this.popuniPodacima();
         }
     }

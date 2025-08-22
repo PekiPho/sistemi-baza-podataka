@@ -10,22 +10,21 @@ using System.Windows.Forms;
 
 namespace proejkt.Forme
 {
-    public partial class KreditnaForma : Form
+    public partial class BankomatForma : Form
     {
-        public KreditnaForma()
+        public BankomatForma()
         {
             InitializeComponent();
             popuniPodacima();
         }
-
         public void popuniPodacima()
         {
             listView1.Items.Clear();
-            List<KreditnaPregled> kartica = DTOManager.vratiSveKreditneKartice();
-
-            foreach (KreditnaPregled k in kartica)
+            List<BankomatPregled> bankomat = DTOManager.vratiSveBankomate();
+            foreach(BankomatPregled b in bankomat)
             {
-                ListViewItem item = new ListViewItem(new string[] { k.BrojKartice, k.MesecniLimit.ToString(),k.MaxPeriodOtplate.ToString() });
+                ListViewItem item = new ListViewItem(new string[] {b.IdUredjaja.ToString(), b.MaxIznos.ToString(),
+                b.BrojNovcanica.ToString()});
                 listView1.Items.Add(item);
             }
             listView1.Refresh();
@@ -33,7 +32,7 @@ namespace proejkt.Forme
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DodajKreditnuForma nf = new DodajKreditnuForma();
+            DodajBankomatForma nf = new DodajBankomatForma();
             this.Hide();
             nf.ShowDialog();
             this.Show();
@@ -44,18 +43,17 @@ namespace proejkt.Forme
         {
             if (listView1.SelectedItems.Count == 0)
             {
-                MessageBox.Show("Izaberite kreditnu karticu!");
+                MessageBox.Show("Izaberite bankomat!");
                 return;
             }
-            string brojkreditneKartice = listView1.SelectedItems[0].SubItems[0].Text;
-            string poruka = "Da li zelite da obrisete izabranu karticu?";
+            int idBankomata = int.Parse(listView1.SelectedItems[0].SubItems[0].Text);
+            string poruka = "Da li zelite da obrisete izabrani bankomat?";
             string title = "Pitanje";
             MessageBoxButtons buttons = MessageBoxButtons.OKCancel;
             DialogResult result = MessageBox.Show(poruka, title, buttons);
-
             if (result == DialogResult.OK)
             {
-                DTOManager.obrisiKreditnuKarticu(brojkreditneKartice);
+                DTOManager.obrisiBankomat(idBankomata);
                 MessageBox.Show("Uspesno!");
                 this.popuniPodacima();
             }
@@ -65,24 +63,29 @@ namespace proejkt.Forme
         {
             if (listView1.SelectedItems.Count == 0)
             {
-                MessageBox.Show("Izaberite kreditnu karticu");
+                MessageBox.Show("Izaberite bankomat!");
                 return;
             }
-            string brojkreditneKartice = listView1.SelectedItems[0].SubItems[0].Text;
-            KreditnaPregled k = DTOManager.vratiKreditnuKarticu(brojkreditneKartice);
+            int idBankomata = int.Parse(listView1.SelectedItems[0].SubItems[0].Text);
+            BankomatPregled b = DTOManager.vratiBankomat(idBankomata);
 
-            KreditnaBasic kartica = new KreditnaBasic(
-                k.BrojKartice,
-                k.DatumIsteka,
-                k.DatumIzdavanja,
-                new RacunBasic(k.Racun.BrojRacuna, "", "", DateTime.Now, 0),
-                k.MesecniLimit,
-                k.MaxPeriodOtplate);
-            IzmeniKreditnuForma nf = new IzmeniKreditnuForma(kartica);
+            BankomatBasic bankomat = new BankomatBasic(
+                b.IdUredjaja,
+                b.Proizvodjac,
+                b.StatusRada,
+                b.PoslednjiServis,
+                b.DatumInstalacije,
+                b.DodatniKomentar,
+                b.Adresa,
+                b.GPS,
+                new FilijalaBasic(b.Filijala.RedniBroj, "", "", "", "", null),
+                new BankaBasic(b.Banka.Id,"","","","",""),
+                b.MaxIznos,
+                b.BrojNovcanica);
+            IzmeniBankomatForma nf = new IzmeniBankomatForma(bankomat);
             this.Hide();
             nf.ShowDialog();
             this.Show();
-
             this.popuniPodacima();
         }
     }
