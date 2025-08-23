@@ -204,6 +204,7 @@ namespace proejkt
                 using(ISession s = DataLayer.GetSession())
                 {
                     var novo = new proejkt.Entiteti.FizickaLica {
+                        IdKlijenta = f.IdKlijenta,
                         JMBG = f.JMBG,
                         MestoIzdavanja = f.MestoIzdavanja,
                         Adresa = f.Adresa,
@@ -340,6 +341,7 @@ namespace proejkt
                 {
                     var novo = new proejkt.Entiteti.PravnaLica
                     {
+                        IdKlijenta = p.IdKlijenta,
                         PIB = p.PIB,
                         NazivFirme = p.NazivFirme,
                         Kontakt = p.Kontakt,
@@ -471,6 +473,7 @@ namespace proejkt
                 {
                     var novo = new proejkt.Entiteti.Organizacije
                     {
+                        IdKlijenta = o.IdKlijenta,
                         Registar = o.Registar,
                         Tip = o.Tip,
                         Osnivac = o.Osnivac,

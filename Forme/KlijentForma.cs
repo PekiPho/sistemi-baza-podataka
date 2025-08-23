@@ -15,6 +15,7 @@ namespace proejkt.Forme
         public KlijentForma()
         {
             InitializeComponent();
+            popuniPodacima();
         }
 
         public void popuniPodacima()
@@ -69,23 +70,34 @@ namespace proejkt.Forme
                 MessageBox.Show("Izaberite klijenta");
                 return;
             }
-            int idKlijenta = int.Parse(listView1.SelectedItems[0].SubItems[0].Text);
-           
+            string poruka = "Ne postoje podaci koji mogu da se promene";
+            string title = "";
+            MessageBoxButtons buttons = MessageBoxButtons.OKCancel;
+            DialogResult result =MessageBox.Show(poruka, title, buttons);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            FizickaLicaForma nf = new FizickaLicaForma();
+            this.Hide();
+            nf.ShowDialog();
+            this.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            OrganizacijeForma nf = new OrganizacijeForma();
+            this.Hide();
+            nf.ShowDialog();
+            this.Show();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-
+            PravnaLicaForma nf = new PravnaLicaForma();
+            this.Hide();
+            nf.ShowDialog();
+            this.Show();
         }
     }
 }

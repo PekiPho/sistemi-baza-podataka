@@ -173,6 +173,18 @@
     <Compile Include="Forme\DodajDebitnuForma.Designer.cs">
       <DependentUpon>DodajDebitnuForma.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forme\DodajFilijaluForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\DodajFilijaluForma.Designer.cs">
+      <DependentUpon>DodajFilijaluForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\DodajFizickaLicaForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\DodajFizickaLicaForma.Designer.cs">
+      <DependentUpon>DodajFizickaLicaForma.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forme\DodajKarticuForma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +208,18 @@
     </Compile>
     <Compile Include="Forme\DodajKreditnuForma.Designer.cs">
       <DependentUpon>DodajKreditnuForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\DodajOrganizacijuForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\DodajOrganizacijuForma.Designer.cs">
+      <DependentUpon>DodajOrganizacijuForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\DodajPravnaLicaForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\DodajPravnaLicaForma.Designer.cs">
+      <DependentUpon>DodajPravnaLicaForma.cs</DependentUpon>
     </Compile>
     <Compile Include="Forme\DodajRacunForma.cs">
       <SubType>Form</SubType>
@@ -251,6 +275,18 @@
     <Compile Include="Forme\IzmeniDebitnuForma.Designer.cs">
       <DependentUpon>IzmeniDebitnuForma.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forme\IzmeniFilijaluForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\IzmeniFilijaluForma.Designer.cs">
+      <DependentUpon>IzmeniFilijaluForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\IzmeniFizickaLicaForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\IzmeniFizickaLicaForma.Designer.cs">
+      <DependentUpon>IzmeniFizickaLicaForma.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forme\IzmeniKarticuForma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -274,6 +310,18 @@
     </Compile>
     <Compile Include="Forme\IzmeniKreditnuForma.Designer.cs">
       <DependentUpon>IzmeniKreditnuForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\IzmeniOrganizacijuForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\IzmeniOrganizacijuForma.Designer.cs">
+      <DependentUpon>IzmeniOrganizacijuForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\IzmeniPravnaLicaForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\IzmeniPravnaLicaForma.Designer.cs">
+      <DependentUpon>IzmeniPravnaLicaForma.cs</DependentUpon>
     </Compile>
     <Compile Include="Forme\IzmeniRacunForma.cs">
       <SubType>Form</SubType>
@@ -397,14 +445,29 @@
     <EmbeddedResource Include="Forme\DodajDebitnuForma.resx">
       <DependentUpon>DodajDebitnuForma.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forme\DodajFilijaluForma.resx">
+      <DependentUpon>DodajFilijaluForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\DodajFizickaLicaForma.resx">
+      <DependentUpon>DodajFizickaLicaForma.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forme\DodajKarticuForma.resx">
       <DependentUpon>DodajKarticuForma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\DodajKioskForma.resx">
       <DependentUpon>DodajKioskForma.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forme\DodajKlijentaForma.resx">
+      <DependentUpon>DodajKlijentaForma.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forme\DodajKreditnuForma.resx">
       <DependentUpon>DodajKreditnuForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\DodajOrganizacijuForma.resx">
+      <DependentUpon>DodajOrganizacijuForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\DodajPravnaLicaForma.resx">
+      <DependentUpon>DodajPravnaLicaForma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\DodajRacunForma.resx">
       <DependentUpon>DodajRacunForma.cs</DependentUpon>
@@ -414,6 +477,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\DodajUredjajForma.resx">
       <DependentUpon>DodajUredjajForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\FilijaleForma.resx">
+      <DependentUpon>FilijaleForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\FizickaLicaForma.resx">
+      <DependentUpon>FizickaLicaForma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\IzmeniAutomatForma.resx">
       <DependentUpon>IzmeniAutomatForma.cs</DependentUpon>
@@ -427,6 +496,12 @@
     <EmbeddedResource Include="Forme\IzmeniDebitnuForma.resx">
       <DependentUpon>IzmeniDebitnuForma.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forme\IzmeniFilijaluForma.resx">
+      <DependentUpon>IzmeniFilijaluForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\IzmeniFizickaLicaForma.resx">
+      <DependentUpon>IzmeniFizickaLicaForma.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forme\IzmeniKarticuForma.resx">
       <DependentUpon>IzmeniKarticuForma.cs</DependentUpon>
     </EmbeddedResource>
@@ -435,6 +510,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\IzmeniKreditnuForma.resx">
       <DependentUpon>IzmeniKreditnuForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\IzmeniOrganizacijuForma.resx">
+      <DependentUpon>IzmeniOrganizacijuForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\IzmeniPravnaLicaForma.resx">
+      <DependentUpon>IzmeniPravnaLicaForma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\IzmeniRacunForma.resx">
       <DependentUpon>IzmeniRacunForma.cs</DependentUpon>
@@ -456,6 +537,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\KreditnaForma.resx">
       <DependentUpon>KreditnaForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\OrganizacijeForma.resx">
+      <DependentUpon>OrganizacijeForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\PravnaLicaForma.resx">
+      <DependentUpon>PravnaLicaForma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\RacunForma.resx">
       <DependentUpon>RacunForma.cs</DependentUpon>
